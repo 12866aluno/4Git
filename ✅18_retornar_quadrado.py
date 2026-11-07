@@ -6,3 +6,9 @@
 #
 # Dica:
 # Use numero ** 2.
+
+def calcular_quadrado(numero):
+    return numero ** 2
+
+
+print(calcular_quadrado(float(input("Insira um Nº para calcular seu quadrado: "))))

@@ -10,3 +10,9 @@
 #
 # Dica:
 # O retorno de uma função pode ser usado em outros cálculos.
+
+def calcular_metade(numero):
+    return numero / 2
+
+
+print(calcular_metade(float(input("Insira um número: "))) + 10)

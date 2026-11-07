@@ -7,3 +7,11 @@
 #
 # Dica:
 # Diminua a variável em 1 a cada repetição.
+
+def contagem_regressiva(inicio):
+    while inicio > 0:
+        print(inicio)
+        inicio -= 1
+
+
+contagem_regressiva(7)

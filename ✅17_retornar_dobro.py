@@ -12,3 +12,12 @@
 #
 # Dica:
 # Dentro da função, use return em vez de print().
+
+def calcular_dobro(numero):
+    return numero * 2
+
+
+resultado = (calcular_dobro(
+    float(input("Insira um Nº para calcular o dobro: "))))
+
+print(resultado)
