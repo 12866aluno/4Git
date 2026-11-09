@@ -2,7 +2,9 @@
 #
 # Crie uma função chamada maior(a, b).
 #
-# A função deverá retornar o maior dos dois valores recebidos.
+# A função deverá retornar o maior dos 
+# dois valores recebidos.
 #
 # Dica:
 # Use if e else.
+
