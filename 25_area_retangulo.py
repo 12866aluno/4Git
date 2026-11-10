@@ -6,3 +6,9 @@
 #
 # Dica:
 # Crie uma variável local chamada area e depois retorne-a.
+
+def calcular_area(base, altura):
+  area = base * altura
+  return area
+
+print(f"{calcular_area(2, 6):.2f}")
