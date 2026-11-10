@@ -14,6 +14,6 @@ def maior(a, b):
   elif b > a:
     return b
   else:
-    return None
+    return "Os dois valores são iguais"
 
-print(maior(9, 3))
+print(maior(9, 9))
