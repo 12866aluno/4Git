@@ -15,5 +15,6 @@ def menor_tres(n1, n2, n3):
   elif n3 < n1 and n3 < n2:
     return n3
   else:
-    print("Os três números são iguais")
-  
+    return "Os três números são iguais"
+
+print(menor_tres(5, 5, 5))
