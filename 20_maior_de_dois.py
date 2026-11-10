@@ -9,4 +9,11 @@
 # Use if e else.
 
 def maior(a, b):
-  
+  if a > b:
+    return a
+  elif b > a:
+    return b
+  else:
+    return None
+
+print(maior(9, 3))
