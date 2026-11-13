@@ -11,3 +11,9 @@
 # Dica:
 # A função pode retornar diretamente o resultado
 # de uma comparação.
+
+def nota_valida(nota):
+  if nota >= 0 and nota <= 100:
+    return True
+  else:
+    return False
