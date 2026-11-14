@@ -9,3 +9,12 @@
 #
 # Dica:
 # Use range() e uma variável acumuladora.
+
+def soma_intervalo(inicio, fim):
+    soma = 0
+    for c in range(inicio, fim+1):
+        soma += c
+    return soma
+
+
+print(soma_intervalo(1, 5))

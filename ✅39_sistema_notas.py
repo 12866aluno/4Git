@@ -18,26 +18,20 @@
 # ----------------------------------------------------
 
 # EU DEFINI QUE:
-# MÉDIA > 10 = APROVADO
-# MÉDIA < 10 E MÉDIA > 5 = RECUPERAÇÃO
-# MÉDIA < 5 = REPROVADO
+# MÉDIA >= 10: APROVADO
+# MÉDIA < 10 E MÉDIA > 5: RECUPERAÇÃO
+# MÉDIA < 6: REPROVADO
 
 
-def ler_nota():
-    soma = 0
-    for c in range(1, 4):
-        nota = float(input(f"Insira a {c}ª nota: "))
-        soma += nota
-        return soma
+def ler_nota(nota1, nota2, nota3):
+    return nota1 + nota2 + nota3
 
 
-def calcular_media():
-    media = 0
-    media = soma / 3
-    return media
+def calcular_media(soma_notas):
+    return soma_notas / 3
 
 
-def classificar_media():
+def classificar_media(media):
     if media > 10:
         print("Aprovado")
     elif media < 10 and media > 5:
@@ -50,8 +44,9 @@ def mostrar_resultado():
     print(f"Seu resultado: {classificar_media()}")
 
 
-ler_nota()
+soma_notas = ler_nota(float(input("Insira a 1ª Nota: ")), float(
+    input("Insira a 2ª Nota: ")), float(input("Insira a 3ª Nota: ")))
 
-calcular_media()
-classificar_media()
-mostrar_resultado()
+media = calcular_media(soma_notas)
+
+classificar_media(media)
