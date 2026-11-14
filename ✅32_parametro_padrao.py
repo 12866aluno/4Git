@@ -11,3 +11,11 @@
 # Dica:
 # Parâmetros com valor padrão devem aparecer depois
 # dos parâmetros obrigatórios.
+
+def cumprimentar(nome, mensagem="Olá"):
+    print(f"{mensagem}, {nome}")
+
+
+cumprimentar("Jonilde")
+
+cumprimentar("Crisleide", "Fala comigo")

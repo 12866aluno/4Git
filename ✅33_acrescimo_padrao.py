@@ -13,3 +13,13 @@
 # Dica:
 # Quando o argumento não for informado, será usado
 # o valor padrão do parâmetro.
+
+def calcular_acrescimo(valor, percentual=10):
+    acrescimo = valor * percentual / 100
+    novo_valor = valor + acrescimo
+    return novo_valor
+
+
+print(calcular_acrescimo(200))
+
+print(calcular_acrescimo(200, 15))
