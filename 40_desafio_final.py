@@ -26,15 +26,16 @@ def mostrar_menu():
     \n1 - Adicionar produto ao valor da compra
     \n2 - Calcular total da compra
     \n3 - Calcular desconto na compra
-    \n4 - Calcular preço final
-    \n5 - Mostrar valor final da compra
-    \n6 - Sair""")
+    \n4 - Mostrar valor final da compra
+    \n5 - Sair""")
     print(" ")
 
 
 def adicionar_produto():
     opcao = 0
     valor_produto = 0
+    valor_total_do_produto = 0
+    quantidade_produto = 0
     while opcao != 2:
         print("1 - Adicionar Produto\n2 - Sair")
         opcao = int(input("Digite a opção correspondente: "))
@@ -47,7 +48,8 @@ def adicionar_produto():
                     valor_total_do_produto = valor_produto * quantidade_produto
         elif opcao > 2 or opcao < 1:
             print("Opção inválida, digite novamente")
-    valor_produto = valor_total_do_produto
+        else:
+            valor_produto = valor_total_do_produto
 
 
 def calcular_total():
@@ -79,7 +81,7 @@ def calcular_preco_final():
 
 
 def mostrar_valor_final_da_compra():
-    print(valor_total_da_compra)
+    print(f"Valor total da compra:{valor_total_da_compra}")
 
 
 # --------------------------------------------------------------------------------
@@ -88,7 +90,7 @@ def mostrar_valor_final_da_compra():
 
 
 opcao_menu = 0
-while opcao_menu != 6:
+while opcao_menu != 5:
     mostrar_menu()
     opcao_menu = int(input("Digite a sua opção desejada: "))
     match opcao_menu:
@@ -99,10 +101,8 @@ while opcao_menu != 6:
         case 3:
             calcular_desconto_na_compra()
         case 4:
-            calcular_preco_final()
-        case 5:
             mostrar_valor_final_da_compra()
-        case 6:
-            opcao_menu = 6
+        case 5:
+            opcao_menu = 5
         case _:
             print("Opção inválida")
