@@ -31,7 +31,7 @@ def mostrar_menu():
     print(" ")
 
 
-def adicionar_produto():
+def adicionar_produto(preco, quant):
     opcao = 0
     valor_produto = 0
     valor_total_do_produto = 0
@@ -50,11 +50,14 @@ def adicionar_produto():
             print("Opção inválida, digite novamente")
         else:
             valor_produto = valor_total_do_produto
+    print()
 
 
 def calcular_total():
-    valor_total_da_compra += valor_produto
+    calcular_total = valor_total_da_compra += valor_produto
     print(valor_total_da_compra)
+    return calcular_total
+    print()
 
 
 def calcular_desconto_na_compra():
@@ -74,14 +77,17 @@ def calcular_desconto_na_compra():
     else:
         desconto = 0
     print(f"Desconto: {desconto}")
+    print()
 
 
 def calcular_preco_final():
     valor_total_da_compra -= desconto
+    print()
 
 
 def mostrar_valor_final_da_compra():
     print(f"Valor total da compra:{valor_total_da_compra}")
+    print()
 
 
 # --------------------------------------------------------------------------------
@@ -95,7 +101,8 @@ while opcao_menu != 5:
     opcao_menu = int(input("Digite a sua opção desejada: "))
     match opcao_menu:
         case 1:
-            adicionar_produto()
+            adicionar_produto(float(input("Preço do produto: ")),
+                              int(input("Quantidade do produto: ")))
         case 2:
             calcular_total()
         case 3:
